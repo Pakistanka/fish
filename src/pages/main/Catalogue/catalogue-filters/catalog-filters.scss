@@ -1,0 +1,96 @@
+.catalogue-filters {
+     .grid-item {
+        border: 1px solid rgb(128, 128, 128);
+        border-radius: 3px;
+        background-color: #fff;
+        // padding: .5rem;
+        padding: 0.5rem 5px;
+        margin: .0.1rem 2px;
+        display: flex;
+        justify-content: center;
+
+        &:hover {
+            background: rgb(201, 218, 255);
+        }
+        @media screen and (max-width: 1024px) {
+            // transform: rotate(45deg);
+        }
+    }
+    .catalog__filter {
+        margin: 10px 0;
+    }
+
+     .category-grid{
+        display: grid;
+        grid-template-areas:
+            "fish meat smoke salt light-salt"
+            "seafood caviar dry-fruits delica allgoods";
+        grid-gap: 2px;
+        grid-template-columns: repeat(5, 1fr);
+
+        .allGoods{
+            background: rgb(238, 243, 255);
+            cursor: pointer;
+        }
+
+        // @media screen and (max-width: 1024px) {
+        //     grid-template-columns: repeat(1, 1fr);
+        //     grid-template-areas:
+        //     "allgoods"
+        //     "fish"
+        //     "meat"
+        //     "smoke"
+        //     "salt"
+        //     "light-salt"
+        //     "seafood"
+        //     "caviar"
+        //     "dry-fruits"
+        //     "delica"
+        //     ;
+        // }
+        @media screen and (max-width: 562px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 0px;
+            grid-template-areas:
+            "allgoods allgoods hidefilter"
+            "fish meat caviar"
+            "smoke salt light-salt"
+            "seafood delica dry-fruits"
+            ;
+        }
+    }
+
+    .fish {grid-area: fish;}
+    .meat {grid-area: meat;}
+    .smoke {grid-area: smoke;}
+    .salt {grid-area: salt;}
+    .light-salt {grid-area: light-salt;}
+    .seafood {grid-area: seafood;}
+    .caviar {grid-area: caviar;}
+    .dry-fruits {grid-area: dry-fruits;}
+    .delica {grid-area: delica;}
+    .allGoods {grid-area: allgoods;}
+    .hideFilter {
+        grid-area: hidefilter;
+        display: none;
+        @media screen and (max-width: 562px) {
+            display: flex;
+        }
+    }
+    .catalog__filter {grid-area: catalog__filter;}
+
+    @media screen and (max-width: 1024px) {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        // background-color: aqua;
+
+    }
+
+    // @media screen and (max-width: 768px) {
+    //     position: fixed;
+        // top: 80px;
+        // left: 0px;
+    // }
+}
